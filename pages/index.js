@@ -57,12 +57,12 @@ export default function Home() {
 
       <main className="{styles.main}" id="main">
             <h2>Riviera Email List Subscription</h2>
-            <p>The Riviera email list is meant to provide a way we can communicate and will ONLY be used for communication about the Riviera Condominiums. Subscribing to this list is 100% optional. The email you sign-up with will never be shared with anyone and at the bottom of every communication you will be able to unsubscribe from further communiction. If you don't want to use your primary email, I suggest making a new at <a
+            <p>The Riviera email list is meant to provide a way we can communicate and will ONLY be used for communication about the Riviera Condominiums. Subscribing to this list is 100% optional. The email you sign-up with will never be shared with anyone and at the bottom of every communication you will be able to unsubscribe from further communiction. If you do not want to use your primary email, I suggest making a new at <a
           href="https://gmail.com"
           target="_blank"
           rel="noopener noreferrer">
         <span>GMAIL</span></a>, but be sure you add it to you mail client so you always recieve the latest communcation.</p>
-            <p>In an attempt to secure this list from the general public we are asking one security question. When it's anserwed correctly you will be allowed to sign up for the email list.</p>
+            <p>In an attempt to secure this list from the general public we are asking one security question. When you have anserwed correctly you will be allowed to sign up for the email list.</p>
 
             {msg}
 
