@@ -10,8 +10,10 @@ export default function Home() {
 
   const checkAnswer = (e)=> {
     e.preventDefault();
-    setCount(count + 1)
     securityCheck()
+    setTimeout(()=>{
+      setCount(count + 1)
+    },500)
   }
   let msg;
 
