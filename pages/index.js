@@ -25,7 +25,6 @@ export default function Home() {
     if (data.collector){
       window.location.replace(data.collector);
     } else {
-      console.log('data', data)
       setCount(count + data.score)
     }
   }
@@ -42,8 +41,9 @@ export default function Home() {
     <br/>
     <button className="button" type="submit">SUBMIT</button>
     </form>
-    <sub>After 3 failed attempts you need to try again tomorrow.</sub><br/>
-    <p className="counter">{count} {count === 1 ? 'attempt' : 'attempts'}<span style={{color: 'red', fontWeight: 'bold', marginLeft: '1rem', fontSize: 'larger'}}>{count === 1 ? 'X': ''}{count === 2 ? 'XX': ''}{count === 3 ? 'XXX': ''}</span></p>
+    <p>After 3 failed attempts you need to try again tomorrow.</p>
+    <p style={{color: 'red', fontWeight: 'bold', fontSize: 'larger'}}>{count === 1 ? 'X': ''}{count === 2 ? 'XX': ''}{count === 3 ? 'XXX': ''}</p>
+    <h4 className="counter">{3 - count} {3-count ===1 ? 'attempt remaining' : 'attempts remaining'}</h4>
   </div>
   } else {
     msg = <div>Sorry too many incorrect attempts. Try again tomorrow. </div>
