@@ -11,9 +11,7 @@ export default function Home() {
   const checkAnswer = (e)=> {
     e.preventDefault();
     securityCheck()
-    setTimeout(()=>{
-      setCount(count + 1)
-    },500)
+    // setCount(count + 1)
   }
   let msg;
 
@@ -26,10 +24,13 @@ export default function Home() {
     const data = await response.json();
     if (data.collector){
       window.location.replace(data.collector);
+    } else {
+      console.log('data', data)
+      setCount(count + data.score)
     }
   }
   
-  if( count < 4 ){
+  if( count < 3 ){
     msg = <div>
     <form onSubmit={checkAnswer}>
       <label htmlFor="security">What is the first name of the property manager who retired?</label><br/>
